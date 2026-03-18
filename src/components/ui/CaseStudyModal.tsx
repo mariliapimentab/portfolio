@@ -79,7 +79,7 @@ export function CaseStudyModal({ projectId, onClose }: CaseStudyModalProps) {
   )
 }
 
-function CaseStudyContent({ data }: { data: NonNullable<ReturnType<typeof CASE_STUDIES[string]['en']>> }) {
+function CaseStudyContent({ data }: { data: (typeof CASE_STUDIES)[string]['en'] }) {
   // This won't actually be called with wrong types — just casting for clarity
   const content = data as (typeof CASE_STUDIES)[string]['en']
 
